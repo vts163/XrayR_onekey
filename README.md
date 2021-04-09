@@ -2,11 +2,16 @@
 
 ## 感谢: 
 
-此脚本基于 @hulisang 的rico对接脚本修改
+1. 此脚本基于 @hulisang 的rico对接脚本修改增强
+2. XrayR项目组
 
 ## 简介
 
+XrayR 后端docker一键对接脚本
+
 > 项目地址及帮助文档:  https://github.com/KANIKIG/XrayR_onekey
+>
+> XrayR项目地址： https://github.com/XrayR-project/XrayR
 
 ## 脚本
 
