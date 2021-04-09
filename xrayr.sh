@@ -111,9 +111,9 @@ pre_install_docker_compose() {
   [ -z "${api_host}" ] && api_host="http://8.8.8.8"
   read -p "前端面板的apikey:" api_key
   [ -z "${api_key}" ] && api_key="123"
-  read -p "前端面板类型:" panel_num
   echo -e "[1] SSpanel"
   echo -e "[2] V2board"
+  read -p "前端面板类型:" panel_num
   if [ "$panel_num" == "1" ]; then
     panel_type="SSpanel"
   elif [ "$panel_num" == "2" ]; then
@@ -122,10 +122,10 @@ pre_install_docker_compose() {
     echo "type error, please try again"
     exit
   fi
-  read -p "节点类型:" node_num
   echo -e "[1] V2ray"
   echo -e "[2] Shadowsocks"
   echo -e "[2] Trojan"
+  read -p "节点类型:" node_num
   if [ "$node_num" == "1" ]; then
     node_type="V2ray"
   elif [ "$node_num" == "2" ]; then
