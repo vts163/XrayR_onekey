@@ -294,7 +294,8 @@ install_dependencies() {
 # Initialization step
 clear
 while true; do
-  echo "-----KANIKIG-----"
+  echo "-----XrayR onekey-----"
+  echo "项目地址及帮助文档:  https://github.com/KANIKIG/XrayR_onekey"
   echo "请输入数字选择你要进行的操作："
   for ((i = 1; i <= ${#operation[@]}; i++)); do
     hint="${operation[$i - 1]}"
