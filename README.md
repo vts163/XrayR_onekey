@@ -2,7 +2,7 @@
 
 ## 感谢: 
 
-1. 此脚本基于 @hulisang 的rico对接脚本修改增强
+1. 此脚本基于 @hulisang 的rico对接脚本修改并增加功能
 2. XrayR项目组
 
 ## 简介
