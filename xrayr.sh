@@ -111,6 +111,31 @@ pre_install_docker_compose() {
   [ -z "${api_host}" ] && api_host="http://8.8.8.8"
   read -p "前端面板的apikey:" api_key
   [ -z "${api_key}" ] && api_key="123"
+  read -p "前端面板类型:" panel_num
+  echo -e "[1] SSpanel"
+  echo -e "[2] V2board"
+  if [ "$panel_num" == "1" ]; then
+    panel_type="SSpanel"
+  elif [ "$panel_num" == "2" ]; then
+    panel_type="V2board"
+  else
+    echo "type error, please try again"
+    exit
+  fi
+  read -p "节点类型:" node_num
+  echo -e "[1] V2ray"
+  echo -e "[2] Shadowsocks"
+  echo -e "[2] Trojan"
+  if [ "$node_num" == "1" ]; then
+    node_type="V2ray"
+  elif [ "$node_num" == "2" ]; then
+    node_type="Shadowsocks"
+  elif [ "$node_num" == "3" ]; then
+    node_type="Trojan"
+  else
+    echo "type error, please try again"
+    exit
+  fi
 }
 
 # Config docker
@@ -173,8 +198,10 @@ Nodes:
           ALICLOUD_SECRET_KEY: bbb
 EOF
   sed -i "s|NodeID:.*|NodeID: ${node_id}|" ./config.yml
-  sed -i "s|ApiHost:.*|ApiHost: ${api_host}|" ./config.yml
-  sed -i "s|ApiKey:.*|ApiKey: ${api_key}|" ./config.yml
+  sed -i "s|ApiHost:.*|ApiHost: \"${api_host}\"|" ./config.yml
+  sed -i "s|ApiKey:.*|ApiKey: \"${api_key}\"|" ./config.yml
+  sed -i "s|PanelType:.*|PanelType: \"${panel_type}\"|" ./config.yml
+  sed -i "s|NodeType:.*|NodeType: ${node_type}|" ./config.yml
 }
 
 # Install docker and docker compose
