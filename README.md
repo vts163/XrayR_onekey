@@ -12,9 +12,9 @@
 
 * 使用脚本  
 
-  1. `mkdir xrayr1 && cd xrayr1`
+  `mkdir xrayr1 && cd xrayr1`
 
-  2. `wget --no-check-certificate https://raw.githubusercontent.com/KANIKIG/XrayR_onekey/main/xrayr.sh && bash xrayr.sh`  
+  `wget --no-check-certificate https://raw.githubusercontent.com/KANIKIG/XrayR_onekey/main/xrayr.sh && bash xrayr.sh`  
 
 * 多开后端只需新建文件夹，将脚本下载到该文件夹下运行即可
 
